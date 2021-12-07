@@ -11,18 +11,23 @@ public class Main {
 
         Malte malte = new Malte(Grao.AVEIA, 2);
         Moinho moinho = new Moinho();
+        Misturador misturador = new Misturador();
+        Filtro filtro = new Filtro();
 
         //moer
         malte.set_isMilled(moinho.executar(malte));
 
         //mostura
 
+        misturador.executar(malte);
 
         //filtragem
 
-        //fervura
+        filtro.executar(malte);
 
-        //separação do trub
+        //armazenagem
+
+        //fervura e resfriamento
 
         //resfriamento
         System.out.println(malte.get_isMilled());

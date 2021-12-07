@@ -16,6 +16,8 @@ public class Malte  implements IMalte {
 
     private boolean _isMusted;
 
+    private boolean _isFiltered;
+
     private String type;
 
     public Malte(Grao grao, int quantidade) {
@@ -76,5 +78,13 @@ public class Malte  implements IMalte {
 
     public void set_isMusted(boolean _isMusted) {
         this._isMusted = _isMusted;
+    }
+
+    public boolean get_isFiltered() {
+        return _isFiltered;
+    }
+
+    public void set_isFiltered(boolean _isFiltered) {
+        this._isFiltered = _isFiltered;
     }
 }
