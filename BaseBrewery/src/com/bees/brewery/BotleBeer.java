@@ -9,6 +9,8 @@ public class BotleBeer {
 
     private float _capacidadeEmMililitros;
 
+    private boolean _estaCheio;
+
     public BotleBeer(Malte malte, TipoDeEnvase tipoDeEnvase) {
         _malte = malte;
         _tipoDeEnvase = tipoDeEnvase;
@@ -18,9 +20,6 @@ public class BotleBeer {
         _isClosed = true;
     }
 
-    public boolean is_Full() {
-        return _malte != null;
-    }
 
     public void encherVasilhame() {
         switch (_tipoDeEnvase) {
@@ -34,6 +33,16 @@ public class BotleBeer {
                 _capacidadeEmMililitros = 1000.0f;
                 break;
         }
-        
+
+        // calcular a quantidade de liquido final;
+        // subtrair capacidade em ml's de malte;
+        // engarrafador = lista vazia de BotleBeer e as enche elas
     }
+
+
+    public boolean get_estaCheio() {
+        return _estaCheio;
+    }
+
+
 }

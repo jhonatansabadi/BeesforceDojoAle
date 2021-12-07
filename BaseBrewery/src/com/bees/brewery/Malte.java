@@ -4,15 +4,13 @@ public class Malte implements IMalte {
 
     private Grao _grao;
 
-    private int _litrosDeAgua;
+    private float _quantidadeDeAgua;
 
     private int _quantidadeInicial;
 
     private int _quantidadeMoida;
 
     private Boolean _isMilled;
-
-    private Boolean _isMoistened;
 
     private boolean _isMusted;
 
@@ -45,18 +43,6 @@ public class Malte implements IMalte {
         _isMilled = isMilled;
     }
 
-    public int get_litrosDeAgua() {
-        return _litrosDeAgua;
-    }
-
-    public void set_litrosDeAgua(int litrosDeAgua) {
-        _litrosDeAgua = litrosDeAgua;
-    }
-
-    void toMoisten() {
-        _isMoistened = _isMoistened;
-    }
-
     public int get_Quantidade() {
         return _quantidadeInicial;
     }
@@ -64,8 +50,6 @@ public class Malte implements IMalte {
     public void set_quantidadeInicial(int quantidadeInicial) {
         _quantidadeInicial = quantidadeInicial;
     }
-
-    private Boolean _isCooked;
 
     public int get_quantidadeMoida() {
         return _quantidadeMoida;
@@ -121,5 +105,11 @@ public class Malte implements IMalte {
 
     public void set_hasFerment(boolean _hasFerment) {
         this._hasFerment = _hasFerment;
+    }
+
+    public boolean hasCerveja() {
+        return get_isMusted() && get_isFiltered()
+                && get_isWarm() && get_isCold() && is_isFermented();
+
     }
 }

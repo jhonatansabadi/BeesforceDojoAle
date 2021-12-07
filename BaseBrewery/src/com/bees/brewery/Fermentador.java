@@ -6,16 +6,17 @@ public class Fermentador extends Maquina {
         tempoDeExecucao = 7000;
     }
     @Override
-    public Boolean executar(Malte p) {
+    public Boolean executar(Malte malte) {
         try{
-            p.set_hasFerment(true);
+            malte.set_hasFerment(true);
             Thread.sleep(tempoDeExecucao);
-            p.set_isFermented(true);
-            p.set_hasFerment(false);
+            malte.set_isFermented(true);
+            malte.set_hasFerment(false);
         } catch (InterruptedException ex){
             System.out.println(ex);
             return false;
         }
         return true;
     }
+
 }
