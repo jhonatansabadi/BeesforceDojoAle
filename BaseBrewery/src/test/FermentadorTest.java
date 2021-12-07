@@ -1,17 +1,19 @@
-package com.bees.brewery;
+package test;
 
+import com.bees.brewery.Fermentador;
+import com.bees.brewery.Grao;
+import com.bees.brewery.Malte;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class FermentadorTest {
 
-
-    Malte malte;
     Fermentador fermentador = new Fermentador();
+    Malte malte;
 
     @Test
-    public void shouldBeFermentad() {
-        malte = new Malte(Grao.ARROZ, 10);
+    public void shouldFermentMalte() {
+        malte = new Malte(Grao.AVEIA, 10);
         fermentador.executar(malte);
         Assert.assertTrue(malte.is_isFermented());
         Assert.assertFalse(malte.is_hasFerment());

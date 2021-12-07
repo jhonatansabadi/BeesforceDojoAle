@@ -1,2 +1,4 @@
-package test;public class EngarrafadorTest {
+package test;
+
+public class EngarrafadorTest {
 }

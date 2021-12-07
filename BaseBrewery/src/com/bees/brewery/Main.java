@@ -15,6 +15,7 @@ public class Main {
         Filtro filtro = new Filtro();
         Aquecedor aquecedor = new Aquecedor();
         Resfriador resfriador = new Resfriador();
+        Fermentador fermentador = new Fermentador();
 
         //moer
         malte.set_isMilled(moinho.executar(malte));
@@ -33,14 +34,17 @@ public class Main {
         //resfriamento
         resfriador.executar(malte);
 
-        //Fermentação
+        //fermentação
+        fermentador.executar(malte);
 
+        //armazenamento
 
-        //Maturação
-
-        //Dry-hopping
 
         //Envase
+
+        //engarrafador
+
+
 
         System.out.println(malte.toString());
 
