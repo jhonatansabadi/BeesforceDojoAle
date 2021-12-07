@@ -70,7 +70,7 @@ public class Malte  implements IMalte {
         this._quantidadeMoida = _quantidadeMoida;
     }
 
-    public boolean is_isMusted() {
+    public boolean get_isMusted() {
         return _isMusted;
     }
 
