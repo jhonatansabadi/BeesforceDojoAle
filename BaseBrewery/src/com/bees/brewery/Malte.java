@@ -1,6 +1,6 @@
 package com.bees.brewery;
 
-public class Malte  implements IMalte {
+public class Malte implements IMalte {
 
     private Grao _grao;
 
@@ -11,7 +11,7 @@ public class Malte  implements IMalte {
     private int _quantidadeMoida;
 
     private Boolean _isMilled;
-    
+
     private Boolean _isMoistened;
 
     private boolean _isMusted;
@@ -22,20 +22,26 @@ public class Malte  implements IMalte {
 
     private boolean _isCold;
 
+    private boolean _isFermented;
+
+    private boolean _hasFerment;
+
     public Malte(Grao grao, int quantidade) {
         _grao = grao;
         _quantidadeInicial = quantidade;
+        _hasFerment = false;
+        _isFermented = false;
     }
 
     public Grao get_Grao() {
         return _grao;
     }
 
-    public Boolean get_isMilled(){
+    public Boolean get_isMilled() {
         return _isMilled;
     }
 
-    public void set_isMilled(Boolean isMilled){
+    public void set_isMilled(Boolean isMilled) {
         _isMilled = isMilled;
     }
 
@@ -47,11 +53,11 @@ public class Malte  implements IMalte {
         _litrosDeAgua = litrosDeAgua;
     }
 
-    void toMoisten(){
+    void toMoisten() {
         _isMoistened = _isMoistened;
     }
 
-    public int get_Quantidade(){
+    public int get_Quantidade() {
         return _quantidadeInicial;
     }
 
@@ -101,4 +107,19 @@ public class Malte  implements IMalte {
         return _isCold;
     }
 
+    public boolean is_isFermented() {
+        return _isFermented;
+    }
+
+    public void set_isFermented(boolean _isFermented) {
+        this._isFermented = _isFermented;
+    }
+
+    public boolean is_hasFerment() {
+        return _hasFerment;
+    }
+
+    public void set_hasFerment(boolean _hasFerment) {
+        this._hasFerment = _hasFerment;
+    }
 }
