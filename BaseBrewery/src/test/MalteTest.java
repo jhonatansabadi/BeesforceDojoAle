@@ -11,7 +11,6 @@ public class MalteTest {
 
     Malte malte;
 
-
     @Test
     public void verificarSeGraoEstaSendoRetornado() {
         malte =  new Malte(Grao.AVEIA, 10);

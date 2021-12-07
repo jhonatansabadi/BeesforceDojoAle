@@ -18,7 +18,9 @@ public class Malte  implements IMalte {
 
     private boolean _isFiltered;
 
-    private String type;
+    private boolean _isWarm;
+
+    private boolean _isCold;
 
     public Malte(Grao grao, int quantidade) {
         _grao = grao;
@@ -45,13 +47,8 @@ public class Malte  implements IMalte {
         _litrosDeAgua = litrosDeAgua;
     }
 
-
     void toMoisten(){
         _isMoistened = _isMoistened;
-    }
-
-    void maltear(){
-
     }
 
     public int get_Quantidade(){
@@ -87,4 +84,21 @@ public class Malte  implements IMalte {
     public void set_isFiltered(boolean _isFiltered) {
         this._isFiltered = _isFiltered;
     }
+
+    public boolean get_isWarm() {
+        return _isWarm;
+    }
+
+    public void set_isWarm(boolean isWarm) {
+        _isWarm = isWarm;
+    }
+
+    public void set_isCold(boolean isCold) {
+        _isCold = isCold;
+    }
+
+    public boolean get_isCold() {
+        return _isCold;
+    }
+
 }
