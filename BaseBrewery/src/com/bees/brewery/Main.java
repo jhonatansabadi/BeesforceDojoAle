@@ -16,6 +16,7 @@ public class Main {
         Aquecedor aquecedor = new Aquecedor();
         Resfriador resfriador = new Resfriador();
         Fermentador fermentador = new Fermentador();
+        Engarrafador longNeck = new Engarrafador(TipoDeEnvase.LONG_NECK);
 
         //moer
         malte.set_isMilled(moinho.executar(malte));
@@ -37,14 +38,8 @@ public class Main {
         //fermentação
         fermentador.executar(malte);
 
-        //armazenamento
-
-
         //Envase
-
-        //engarrafador
-
-
+        longNeck.executar(malte);
 
         System.out.println(malte.toString());
 

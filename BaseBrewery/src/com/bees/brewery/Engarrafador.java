@@ -1,22 +1,19 @@
 package com.bees.brewery;
 
-public class Engarrafador extends Armazenamento {
+public class Engarrafador extends Maquina {
 
-    public Engarrafador() {
-        altura = 10;
-        largura = 15;
-        profundidade = 10;
-        tipoDeLiquido = "cerveja";
-        temperaturaDoLiquido = 5.0F;
-        tempoDeArmazenamento = 10;
+    private TipoDeEnvase _tipoDeEnvase;
+
+    public Engarrafador(TipoDeEnvase tipoDeEnvase) {
+        _tipoDeEnvase = tipoDeEnvase;
     }
 
 
-    public Boolean executar(Malte p) {
+    public Boolean executar(Malte malte) {
         try {
-            Thread.sleep(tempoDeArmazenamento);
-
-        } catch (InterruptedException e) {
+            BotleBeer botleBeer  = new BotleBeer(malte, _tipoDeEnvase);
+            botleBeer.encherVasilhame();
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }

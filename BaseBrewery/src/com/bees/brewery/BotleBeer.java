@@ -5,15 +5,35 @@ public class BotleBeer {
 
     private boolean _isClosed;
 
-    public BotleBeer(Malte malte) {
+    private TipoDeEnvase _tipoDeEnvase;
+
+    private float _capacidadeEmMililitros;
+
+    public BotleBeer(Malte malte, TipoDeEnvase tipoDeEnvase) {
         _malte = malte;
+        _tipoDeEnvase = tipoDeEnvase;
     }
 
-    public void close(){
+    public void close() {
         _isClosed = true;
     }
 
     public boolean is_Full() {
         return _malte != null;
+    }
+
+    public void encherVasilhame() {
+        switch (_tipoDeEnvase) {
+            case LATA:
+                _capacidadeEmMililitros = 350.0f;
+                break;
+            case LONG_NECK:
+                _capacidadeEmMililitros = 330.0f;
+                break;
+            case LITRAO:
+                _capacidadeEmMililitros = 1000.0f;
+                break;
+        }
+        
     }
 }
