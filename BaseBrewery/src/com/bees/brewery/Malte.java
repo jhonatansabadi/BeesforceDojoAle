@@ -4,8 +4,6 @@ public class Malte implements IMalte {
 
     private Grao _grao;
 
-    private float _quantidadeDeAgua;
-
     private int _quantidadeInicial;
 
     private int _quantidadeMoida;
