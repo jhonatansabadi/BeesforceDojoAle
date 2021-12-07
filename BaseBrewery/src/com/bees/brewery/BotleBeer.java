@@ -33,9 +33,6 @@ public class BotleBeer {
         }
 
         return litros - _capacidadeEmMililitros;
-        // calcular a quantidade de liquido final;
-        // subtrair capacidade em ml's de malte;
-        // engarrafador = lista vazia de BotleBeer e as enche elas
     }
 
 }

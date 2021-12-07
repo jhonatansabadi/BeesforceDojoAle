@@ -18,30 +18,21 @@ public class Main {
         Fermentador fermentador = new Fermentador();
         Engarrafador longNeck = new Engarrafador(TipoDeEnvase.LONG_NECK);
 
-        //moer
         malte.set_isMilled(moinho.executar(malte));
-
-        //mostura
 
         misturador.executar(malte);
 
-        //filtragem
-
         filtro.executar(malte);
 
-        //fervura
         aquecedor.executar(malte);
 
-        //resfriamento
         resfriador.executar(malte);
 
-        //fermentação
         fermentador.executar(malte);
 
-        //Envase
         longNeck.executar(malte);
 
-        System.out.println(malte.toString());
+        System.out.println(("Foram criadas: " + longNeck.get_listDeGarrafas().size()));
 
     }
 }
